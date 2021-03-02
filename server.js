@@ -42,7 +42,7 @@ const init = async() => {
         await dbase.authenticate();
         await dbSeed();
         const port = process.env.PORT || 3030;
-        route.listen(port, () => console.log('port connected'))
+        route.listen(port, () => console.log(`connected on PORT ${port}`))
     } catch (ex) {
         console.log(ex);
     }
